@@ -1,3 +1,5 @@
 <apply template="base">
-  <h1>TODOS</h1>
+  <div class="page-header">
+    <h1>TODOS</h1>
+  </div>
 </apply>
