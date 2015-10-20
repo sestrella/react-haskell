@@ -15,9 +15,9 @@ import Snap.Snaplet.PostgresqlSimple
 
 ------------------------------------------------------------------------------
 data App = App
-    { _heist :: Snaplet (Heist App)
-    , _db :: Snaplet Postgres
-    }
+  { _heist :: Snaplet (Heist App)
+  , _db :: Snaplet Postgres
+  }
 
 makeLenses ''App
 

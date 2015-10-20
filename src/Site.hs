@@ -22,11 +22,14 @@ import qualified Data.Text as T
 import qualified Heist.Interpreted as I
 ------------------------------------------------------------------------------
 import           Application
+import           ReactHaskell.Handler
 
 ------------------------------------------------------------------------------
 -- | The application's routes.
 routes :: [(ByteString, Handler App App ())]
-routes = [ ("", serveDirectory "static") ]
+routes = [ ("/", method GET index)
+         , ("/api/todos", method GET getTodos)
+         ]
 
 
 ------------------------------------------------------------------------------

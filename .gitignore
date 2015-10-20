@@ -1,4 +1,5 @@
 .ghci
 .stack-work
 log/*.log
-src/*.dump-hi
+snaplets/postgresql-simple/devel.cfg
+src/**/*.dump-hi
