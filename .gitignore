@@ -1,4 +1,4 @@
 .ghci
 .stack-work
-log
+log/*.log
 src/*.dump-hi
