@@ -29,6 +29,7 @@ import           ReactHaskell.Handler
 routes :: [(ByteString, Handler App App ())]
 routes = [ ("/", method GET index)
          , ("/api/todos", method GET getTodos)
+         , ("/assets", serveDirectory "bower_components")
          ]
 
 
