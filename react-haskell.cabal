@@ -33,7 +33,8 @@ Executable react-haskell
     snap-loader-static        >= 0.9     && < 0.10,
     text                      >= 0.11    && < 1.3,
     time                      >= 1.1     && < 1.6,
-    xmlhtml                   >= 0.1     && < 0.3
+    xmlhtml                   >= 0.1     && < 0.3,
+    snaplet-postgresql-simple >= 0.6     && < 0.7
 
   if flag(old-base)
     build-depends:
