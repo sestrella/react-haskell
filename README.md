@@ -10,9 +10,17 @@ cp snaplets/postgresql-simple/devel.cfg.sample snaplets/postgresql-simple/devel.
 
 Then update the file `devel.cfg` with your local DB setup.
 
-## Development
+## Dependencies
 
 ```
 sudo apt-get install -y libpcre3-dev
+stack setup
+bower install
+```
+
+## Development
+
+```
 stack build --flag react-haskell:development
+stack exec react-haskell
 ```
