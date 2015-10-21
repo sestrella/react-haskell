@@ -5,6 +5,7 @@ module Site
   ) where
 
 import Application
+import Control.Applicative
 import Data.ByteString (ByteString)
 import ReactHaskell.Handler
 import Snap.Core
@@ -13,9 +14,9 @@ import Snap.Snaplet.Heist
 import Snap.Snaplet.PostgresqlSimple
 import Snap.Util.FileServe
 
-routes :: [(ByteString, Handler App App ())]
+routes :: [(ByteString, AppHandler ())]
 routes = [ ("/", method GET index)
-         , ("/api/todos", method GET getTodos)
+         , ("/api/todos", method GET getTodos <|> method POST postTodo)
          , ("/assets", serveDirectory "bower_components")
          ]
 

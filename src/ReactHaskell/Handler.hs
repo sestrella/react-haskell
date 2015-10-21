@@ -13,3 +13,6 @@ index = render "index"
 
 getTodos :: AppHandler ()
 getTodos = (liftPG listTodos) >>= writeJSON
+
+postTodo :: AppHandler ()
+postTodo = undefined
