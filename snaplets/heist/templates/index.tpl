@@ -7,8 +7,28 @@
 
   <script>
     var TodoEntry = React.createClass({
+      getInitialState: function() {
+        return { editMode: false }
+      },
+
+      enableEditMode: function() {
+        this.setState({ editMode: true });
+      },
+
+      disableEditMode: function() {
+        this.setState({ editMode: false });
+      },
+
       render: function() {
-        return React.createElement('li', null, this.props.data.text);
+        if (this.state.editMode) {
+          return React.createElement('li', null, React.createElement('input', {
+            autoFocus: true,
+            onBlur:    this.disableEditMode,
+            value:     this.props.data.text
+          }));
+        } else {
+          return React.createElement('li', { onClick: this.enableEditMode }, this.props.data.text);
+        }
       }
     });
 
