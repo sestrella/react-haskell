@@ -3,14 +3,14 @@
 
 module ReactHaskell.Types where
 
-import Data.Aeson
-import Database.PostgreSQL.Simple.FromRow
-import Database.PostgreSQL.Simple.ToRow
-import Database.PostgreSQL.Simple.ToField
+import           Data.Aeson
+import           Database.PostgreSQL.Simple.FromRow
+import           Database.PostgreSQL.Simple.ToField
+import           Database.PostgreSQL.Simple.ToRow
 
 data Todo = Todo
   { todoId   :: Integer
-  , todoText :: String
+  , todoText        :: String
   } deriving (Eq, Show)
 
 instance FromRow Todo where

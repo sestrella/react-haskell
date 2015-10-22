@@ -4,15 +4,15 @@ module Site
   ( app
   ) where
 
-import Application
-import Control.Applicative
-import Data.ByteString (ByteString)
-import ReactHaskell.Handler
-import Snap.Core
-import Snap.Snaplet
-import Snap.Snaplet.Heist
-import Snap.Snaplet.PostgresqlSimple
-import Snap.Util.FileServe
+import           Application
+import           Control.Applicative
+import           Data.ByteString               (ByteString)
+import           ReactHaskell.Handler
+import           Snap.Core
+import           Snap.Snaplet
+import           Snap.Snaplet.Heist
+import           Snap.Snaplet.PostgresqlSimple
+import           Snap.Util.FileServe
 
 routes :: [(ByteString, AppHandler ())]
 routes = [ ("/", method GET index)
