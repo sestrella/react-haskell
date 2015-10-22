@@ -17,6 +17,7 @@ import           Snap.Util.FileServe
 routes :: [(ByteString, AppHandler ())]
 routes = [ ("/", method GET index)
          , ("/api/todos", method GET getTodos <|> method POST postTodo)
+         , ("/api/todo/:id", method PATCH patchTodo <|> method DELETE deleteTodo)
          , ("/assets", serveDirectory "bower_components")
          ]
 

@@ -10,7 +10,7 @@ import           Database.PostgreSQL.Simple.ToRow
 
 data Todo = Todo
   { todoId   :: Integer
-  , todoText        :: String
+  , todoText :: String
   } deriving (Eq, Show)
 
 instance FromRow Todo where
@@ -20,7 +20,8 @@ instance ToRow Todo where
   toRow Todo{..} = [toField todoId, toField todoText]
 
 instance FromJSON Todo where
-  parseJSON = undefined
+  parseJSON (Object o) = Todo <$> o .: "id" <*> o .: "text"
+  parseJSON _          = mempty
 
 instance ToJSON Todo where
   toJSON Todo{..} = object ["id" .= todoId, "text" .= todoText]
