@@ -1,6 +1,5 @@
 .ghci
 .stack-work
-bower_components
 log/*.log
 snaplets/postgresql-simple/devel.cfg
 src/**/*.dump-hi
