@@ -1,26 +1,15 @@
-html {
-   padding: 0;
-   margin: 0;
-   background-color: #ffffff;
-   font-family: Verdana, Helvetica, sans-serif;
+#todo-list {
+  margin: 10px;
 }
-body {
-   padding: 0;
-   margin: 0;
+
+.todo {
+  border-bottom: 1px solid #C0C0C0;
+  margin-top: 10px;
+  padding-bottom: 5px;
 }
-a {
-   text-decoration: underline;
-}
-a :hover {
-   cursor: pointer;
-   text-decoration: underline;
-}
-img {
-   border: none;
-}
-#content {
-   padding-left: 1em;
-}
-#info {
-   font-size: 60%;
+
+.btn {
+  margin-right: 10px;
+  position: absolute;
+  right: 40px;
 }

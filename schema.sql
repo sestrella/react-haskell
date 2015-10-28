@@ -1,4 +1,4 @@
 CREATE TABLE todos (
-  id   serial,
-  text varchar NOT NULL
+  id          serial,
+  description varchar NOT NULL
 )

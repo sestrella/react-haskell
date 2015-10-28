@@ -7,13 +7,14 @@
 
     <title>TODOS</title>
 
-    <link rel="stylesheet" href="/screen.css"/>
-    <link rel="stylesheet" href="/assets/bootstrap/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="/assets/screen.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/css/bootstrap.min.css">
 
-    <script src="/assets/jquery/dist/jquery.min.js"></script>
-    <script src="/assets/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script src="/assets/react/react.min.js"></script>
-    <script src="/assets/react/react-dom.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/react/0.14.0/react-with-addons.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/react/0.14.0/react-dom.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.30/browser.min.js"></script>
   </head>
   <body>
     <div class="container">

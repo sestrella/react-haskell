@@ -20,18 +20,20 @@ postTodo :: AppHandler ()
 postTodo = do
   todo <- reqJSON
   liftPG (createTodo todo)
-  writeBS "done"
+  liftPG listTodos >>= writeJSON
 
 patchTodo :: AppHandler ()
 patchTodo = do
   id   <- getId
   todo <- reqJSON
   liftPG (updateTodo id todo)
+  liftPG listTodos >>= writeJSON
 
 deleteTodo :: AppHandler ()
 deleteTodo = do
   id <- getId
   liftPG (destroyTodo id)
+  liftPG listTodos >>= writeJSON
 
 getId :: AppHandler Integer
 getId = maybeBadReq "Missing required param \"id\"" (readParam "id")

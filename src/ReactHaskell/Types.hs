@@ -9,19 +9,24 @@ import           Database.PostgreSQL.Simple.ToField
 import           Database.PostgreSQL.Simple.ToRow
 
 data Todo = Todo
-  { todoId   :: Integer
-  , todoText :: String
+  { todoId          :: Integer
+  , todoDescription :: String
   } deriving (Eq, Show)
 
 instance FromRow Todo where
   fromRow = Todo <$> field <*> field
 
 instance ToRow Todo where
-  toRow Todo{..} = [toField todoId, toField todoText]
+  toRow Todo{..} = [ toField todoId
+                   , toField todoDescription
+                   ]
 
 instance FromJSON Todo where
-  parseJSON (Object o) = Todo <$> o .: "id" <*> o .: "text"
+  parseJSON (Object o) = Todo <$> o .: "id"
+                              <*> o .: "description"
   parseJSON _          = mempty
 
 instance ToJSON Todo where
-  toJSON Todo{..} = object ["id" .= todoId, "text" .= todoText]
+  toJSON Todo{..} = object [ "id"          .= todoId
+                           , "description" .= todoDescription
+                           ]

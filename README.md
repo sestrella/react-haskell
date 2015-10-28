@@ -15,7 +15,6 @@ Then update the file `devel.cfg` with your local DB setup.
 ```
 sudo apt-get install -y libpcre3-dev
 stack setup
-bower install
 ```
 
 ## Development
